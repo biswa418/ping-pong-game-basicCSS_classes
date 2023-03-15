@@ -1,0 +1,74 @@
+body {
+  background-color: lightcyan;
+  background: url("https://i.pinimg.com/originals/52/03/ca/5203ca2ffe95798844c0824f3077d46c.png");
+  background-size: cover;
+  border-left: 1vw solid rgb(88, 29, 29);
+  border-right: 1vw solid rgb(88, 29, 29);
+  /* background-repeat: no-repeat; */
+  z-index: -1;
+  overflow: hidden;
+}
+
+:root {
+  --time-duration: 9s;
+}
+
+body::-webkit-scrollbar {
+  overflow: hidden;
+  display: none;
+}
+
+#ball {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  border-radius: 50%;
+  background-image: radial-gradient(red 0%, black 200%);
+  box-sizing: border-box;
+}
+
+.bar {
+  position: absolute;
+  width: 20vw;
+  box-sizing: border-box;
+  border-radius: 20px;
+  height: 4vh;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  transition: all 0.5s;
+}
+
+#upper {
+  position: absolute;
+  top: 0;
+  background-color: rgb(244, 90, 121);
+}
+
+#lower {
+  position: absolute;
+  bottom: 0;
+  background-color: purple;
+}
+
+/* amimation classes to be added later */
+/* shows the ball movement in 2D -- step taken -> 2000px */
+.animate-top-right {
+  transition: transform linear var(--time-duration);
+  transform: translateX(2000px) translateY(-2000px);
+}
+
+.animate-bottom-right {
+  transition: transform linear var(--time-duration);
+  transform: translateX(2000px) translateY(2000px);
+}
+
+.animate-top-left {
+  transition: transform linear var(--time-duration);
+  transform: translateX(-2000px) translateY(-2000px);
+}
+
+.animate-bottom-left {
+  transition: transform linear var(--time-duration);
+  transform: translateX(-2000px) translateY(2000px);
+}
